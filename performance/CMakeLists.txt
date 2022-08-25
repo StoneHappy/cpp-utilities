@@ -8,4 +8,6 @@ INTERFACE
 	${CMAKE_CURRENT_LIST_DIR}/include
 )
 
+if(CPP_UTILITIES_ENABLE_TEST)
 add_subdirectory(test)
+endif()

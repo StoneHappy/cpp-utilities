@@ -13,5 +13,7 @@ INTERFACE
 	cpp-utilities::hash
 )
 
+if(CPP_UTILITIES_ENABLE_TEST)
 add_subdirectory(test)
+endif()
 
