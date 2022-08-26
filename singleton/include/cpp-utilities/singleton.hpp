@@ -9,7 +9,7 @@ protected:
     PublicSingleton() {}
 
 public:
-    static T& getInstance() noexcept(std::is_nothrow_constructible<T>::value)
+    static T& getInstance() noexcept
     {
         static T instance;
         return instance;
