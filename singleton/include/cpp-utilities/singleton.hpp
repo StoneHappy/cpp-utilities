@@ -9,10 +9,15 @@ protected:
     PublicSingleton() {}
 
 public:
-    static T& getInstance() noexcept
+    static T* getInstance() noexcept
     {
-        static T instance;
+        static T* instance = new T();
         return instance;
+    }
+
+    static void deconstruct() noexcept
+    {
+        delete getInstance();
     }
     virtual ~PublicSingleton() noexcept {}
     PublicSingleton(const PublicSingleton&) = delete;
